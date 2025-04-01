@@ -1,8 +1,15 @@
 html {
     font-size: 62.5%;
 }
+.letter {
+    color: black;
+}
+.bambamarket {
+    margin-left: 20px;
+}
+
 body {
-    background-color: #f5f3f3
+    background-color: #c2fbff
 }
 h1 {
     text-align: center;
@@ -16,7 +23,7 @@ h4 {
 }
 header {
     padding: 20px 0 0 0;
-    background: white;
+    background: #c2fbff;
     text-align: center;
 }
 @media (min-width: 750px) {
@@ -100,16 +107,16 @@ ul {
 
 .barra {
     padding: 20px 0;
-    background: #741d51; /* Old browsers */
-    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+    background: hsl(120, 6%, 17%);
+    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%);
+    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%);
+    background: linear-gradient(to right, #741d51 0%,#e44e52 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
 }
 
 .barra p {
     margin:0;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .icono {
     background-repeat: no-repeat;
