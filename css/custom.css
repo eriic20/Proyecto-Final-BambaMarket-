@@ -108,9 +108,7 @@ ul {
 .barra {
     padding: 20px 0;
     background: hsl(120, 6%, 17%);
-    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%);
-    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%);
-    background: linear-gradient(to right, #741d51 0%,#e44e52 100%);
+    background-color: black;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
 }
 
