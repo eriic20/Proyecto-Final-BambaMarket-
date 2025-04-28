@@ -1,116 +1,83 @@
+// Variables principales
+const carrito = [];
+const listaProductos = document.querySelector('#lista-productos');
+const tablaCarrito = document.querySelector('#tabla-carrito tbody');
+const botonVaciar = document.querySelector('#boton-vaciar');
 
-const carrito = document.querySelector('#carrito');
-const listaCursos = document.querySelector('#lista-cursos');
-const contenedorCarrito = document.querySelector('#lista-carrito tbody');
-const vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); 
-let articulosCarrito = [];
+// Escuchar clics
+listaProductos.addEventListener('click', agregarProducto);
+botonVaciar.addEventListener('click', vaciarCarrito);
 
+// Función para agregar productos
+function agregarProducto(e) {
+    if (e.target.classList.contains('boton-agregar')) {
+        const productoSeleccionado = e.target.parentElement;
+        const infoProducto = {
+            titulo: productoSeleccionado.querySelector('h3').textContent,
+            precio: productoSeleccionado.querySelector('.precio').textContent,
+            id: e.target.getAttribute('data-id'),
+            cantidad: 1
+        };
 
-cargarEventListeners();
+        const existe = carrito.some(producto => producto.id === infoProducto.id);
 
-function cargarEventListeners() {
-    
-     listaCursos.addEventListener('click', agregarCurso);
+        if (existe) {
+            const productos = carrito.map(producto => {
+                if (producto.id === infoProducto.id) {
+                    producto.cantidad++;
+                    return producto;
+                } else {
+                    return producto;
+                }
+            });
+            carrito.length = 0;
+            carrito.push(...productos);
+        } else {
+            carrito.push(infoProducto);
+        }
 
- 
-     carrito.addEventListener('click', eliminarCurso);
-
-
-     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
-
-}
-
-
-
-function agregarCurso(e) {
-    e.preventDefault();
-  
-    if(e.target.classList.contains('agregar-carrito')) {
-         const curso = e.target.parentElement.parentElement;
-       
-         leerDatosCurso(curso);
+        actualizarCarrito();
     }
 }
 
-
-function leerDatosCurso(curso) {
-    const infoCurso = {
-         imagen: curso.querySelector('img').src,
-         titulo: curso.querySelector('h4').textContent,
-         precio: curso.querySelector('.precio span').textContent,
-         id: curso.querySelector('a').getAttribute('data-id'), 
-         cantidad: 1
-    }
-
-
-    if( articulosCarrito.some( curso => curso.id === infoCurso.id ) ) { 
-         const cursos = articulosCarrito.map( curso => {
-              if( curso.id === infoCurso.id ) {
-                   curso.cantidad++;
-                    return curso;
-               } else {
-                    return curso;
-            }
-         })
-         articulosCarrito = [...cursos];
-    }  else {
-         articulosCarrito = [...articulosCarrito, infoCurso];
-    }
-
-    
-
-    
-
-    
-    carritoHTML();
+// Función para vaciar carrito
+function vaciarCarrito() {
+    carrito.length = 0;
+    actualizarCarrito();
 }
 
+// Función para actualizar carrito
+function actualizarCarrito() {
+    limpiarHTML();
 
-function eliminarCurso(e) {
-    e.preventDefault();
-    if(e.target.classList.contains('borrar-curso') ) {
-
-         const cursoId = e.target.getAttribute('data-id')
-         
-
-         articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
-
-         carritoHTML();
-    }
-}
-
-
-
-function carritoHTML() {
-
-    vaciarCarrito();
-
-    articulosCarrito.forEach(curso => {
-         const row = document.createElement('tr');
-         row.innerHTML = `
-              <td>  
-                   <img src="${curso.imagen}" width=100>
-              </td>
-              <td>${curso.titulo}</td>
-              <td>${curso.precio}</td>
-              <td>${curso.cantidad} </td>
-              <td>
-                   <a href="#" class="borrar-curso" data-id="${curso.id}">X</a>
-              </td>
-         `;
-         contenedorCarrito.appendChild(row);
+    carrito.forEach(producto => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td>${producto.titulo}</td>
+            <td>${producto.precio}</td>
+            <td>${producto.cantidad}</td>
+            <td><button class="borrar" data-id="${producto.id}">X</button></td>
+        `;
+        tablaCarrito.appendChild(fila);
     });
 
+    // Botones de eliminar producto
+    document.querySelectorAll('.borrar').forEach(boton => {
+        boton.addEventListener('click', eliminarProducto);
+    });
 }
 
+// Función para eliminar producto individual
+function eliminarProducto(e) {
+    const id = e.target.getAttribute('data-id');
+    const indice = carrito.findIndex(producto => producto.id === id);
+    if (indice !== -1) {
+        carrito.splice(indice, 1);
+        actualizarCarrito();
+    }
+}
 
-function vaciarCarrito() {
-
-
-
-
-
-    while(contenedorCarrito.firstChild) {
-         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
-     }
+// Función para limpiar HTML
+function limpiarHTML() {
+    tablaCarrito.innerHTML = '';
 }

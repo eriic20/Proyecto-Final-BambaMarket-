@@ -1,10 +1,10 @@
 html {
     font-size: 62.5%;
 }
-.letrass {
+.letras {
     color: black;
 }
-.bambamarket {
+.bamba-mercado {
     margin-left: 20px;
 }
 
@@ -44,26 +44,25 @@ ul {
     list-style: none;
 }
 #hero {
-    background-image:url(../img/hero.jpg);
+    background-image: url(../img/hero.jpg);
     height: 350px;
     background-size: cover;
 }
 #encabezado {
     margin: 30px 0;
 }
-.submenu {
+.sub-menu {
     position: relative;
 }
 
-.submenu #carrito{
+.sub-menu #carrito {
     display: none;
 }
-.submenu:hover #carrito{
+.sub-menu:hover #carrito {
     display: block;
     position: absolute;
-    right:0;
-
-    top:100%;
+    right: 0;
+    top: 100%;
     z-index: 1;
     background-color: white;
     padding: 20px;
@@ -77,22 +76,22 @@ ul {
     border-radius: 10px;
     color: white;
 }
-.contenido-hero {
+.contenido-principal {
     margin-top: 80px;
     color: white;
 }
-.contenido-hero form {
+.contenido-principal form {
     position: relative;
     margin-bottom: 0;
 }
-.contenido-hero form #buscador {
+.contenido-principal form #buscador {
     height: 50px;
     margin-bottom: 0;
 }
-.contenido-hero form .submit-buscador {
+.contenido-principal form .submit-buscador {
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     height: 100%;
     padding: 0;
     display: block;
@@ -101,22 +100,21 @@ ul {
     background-image: url(../img/lupa.png);
     background-position: right center;
     background-repeat: no-repeat;
-    border:none;
+    border: none;
 }
 
-
-.barra {
+.barra-negra {
     padding: 20px 0;
     background: hsl(120, 6%, 17%);
     background-color: black;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#741d51', endColorstr='#e44e52', GradientType=1);
 }
 
-.barra p {
-    margin:0;
+.barra-negra p {
+    margin: 0;
     color: rgb(255, 255, 255);
 }
-.icono {
+.icono-bamba {
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 60px;
@@ -125,8 +123,8 @@ ul {
     text-align: center;
 }
 @media (min-width: 750px) {
-    .icono {
-        margin-bottom:0;
+    .icono-bamba {
+        margin-bottom: 0;
     }
 }
 .icono1 {
@@ -140,10 +138,10 @@ ul {
 }
 
 #lista-bambas .row {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
-.agregar-carrito {
-    margin:10px 0;
+.añadir-carrito {
+    margin: 10px 0;
 }
 
 .bamba {
@@ -156,11 +154,11 @@ ul {
         text-align: left;
     }
 }
-.info-bamba  {
+.info-bamba {
     padding: 10px 20px;
 }
 
-.info-bamba p, 
+.info-bamba p,
 .bamba h4 {
     margin-bottom: 5px;
 }
@@ -174,14 +172,13 @@ ul {
     font-size: 22px;
 }
 
-
-.footer {
+.pie-pagina {
     margin-top: 40px;
-    border-top:1px solid #aaa;;
-    padding-top: 40px;   
+    border-top: 1px solid #aaa;
+    padding-top: 40px;
 }
-.footer .menu a{
-display: block;
-margin-bottom: 10px;
-text-decoration: none;
+.pie-pagina .menu a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
 }

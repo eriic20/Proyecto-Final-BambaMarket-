@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title class="bambamarket">Exclusive Sneaker Store</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/carrito.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -98,7 +98,7 @@
                         <h4><strong><i>Nike Air Force 1 Low x Off-White™ ‘MCA’</i></strong></h4>
                         <p>La Nike Air Force 1 Low x Off-White™ 'MCA' celebra la exposición Figures of Speech de Virgil Abloh con un diseño monocromático en azul University. Destacan detalles como el logo metálico, pespuntes en zigzag, y cordones con la palabra "Shoelaces".</p>
                         <img src="img/estrellas.png"> <br>
-                        <a href="https://serranogimenezeric.fpllefia.net/wp/acerca-de/?customize_changeset_uuid=d69f7a5c-f1df-4af9-b1ec-940c114a2ce8&customize_messenger_channel=preview-1">VER AQUÍ!</a>
+                        <a href="https://serranogimenezeric.fpllefia.net/wp/wp-admin/post.php?post=6&action=edit">VER AQUÍ!</a>
                         <p class="precio">7.500,00 €  <span class="u-pull-right ">5.800,00 €</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
                     </div>
@@ -111,7 +111,7 @@
                             <h4><strong><i>Nike x Louis Vuitton Air Force 1</i></strong></h4>
                             <p>La colaboración Nike x Louis Vuitton Air Force 1, diseñada por Virgil Abloh, combina lujo y deporte con materiales premium como cuero de alta calidad. Presenta detalles exclusivos como el monograma de Louis Vuitton y acabados sofisticados.</p>
                             <img src="img/estrellas.png"><br>
-                            <a href="pagina_destino.html">VER AQUÍ!</a>
+                            <a href="https://serranogimenezeric.fpllefia.net/wp/wp-admin/customize.php?theme=twentytwentyone&return=https%3A%2F%2Fserranogimenezeric.fpllefia.net%2Fwp%2Fwp-admin%2Fthemes.php">VER AQUÍ!</a>
                             <p class="precio">8.000,00 €<span class="u-pull-right ">6.500,00 €</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
                         </div>
@@ -243,12 +243,32 @@
                                 <p>Las Air Jordan 1 Retro High OG "Spider-Man: Across the Spider-Verse" son una edición limitada inspirada en la película de animación Spider-Man: Across the Spider-Verse. Su diseño presenta una combinación de colores rojos, negros y blancos, emulando el traje de Miles Morales, con detalles como una malla en la parte superior.</p>
                                 <img src="img/estrellas.png">
                                 <p class="precio">500,00 €  <span class="u-pull-right ">370,00 €</span></p>
-                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
+                                <a href="#" class="boton-agregar-carrito" data-id="12">Agregar Al Carrito</a>
                             </div>
                         </div>
                 </div>
             </div>
     </div>  
+
+<div id="carrito" class="carrito">
+    <h2>Tu carrito</h2>
+    <table id="lista-carrito" class="tabla-carrito">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Título</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertarán los cursos agregados -->
+        </tbody>
+    </table>
+    <button id="vaciar-carrito" class="boton-vaciar-carrito">Vaciar carrito</button>
+</div>
+
 
     <footer id="footer" class="footer">
         <div class="container">
