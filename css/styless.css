@@ -97,8 +97,6 @@ ul {
     display: block;
     text-indent: -9999px;
     width: 50px;
-    background-image: url(../img/lupa.png);
-    background-position: right center;
     background-repeat: no-repeat;
     border: none;
 }
@@ -107,7 +105,6 @@ ul {
     padding: 20px 0;
     background: hsl(120, 6%, 17%);
     background-color: black;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#741d51', endColorstr='#e44e52', GradientType=1);
 }
 
 .barra-negra p {
