@@ -51,24 +51,7 @@ ul {
 #encabezado {
     margin: 30px 0;
 }
-.sub-menu {
-    position: relative;
-}
 
-.sub-menu #carrito {
-    display: none;
-}
-.sub-menu:hover #carrito {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 1;
-    background-color: white;
-    padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
-}
 .vacio {
     padding: 10px;
     background-color: crimson;
